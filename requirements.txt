@@ -1,0 +1,10 @@
+ccxt
+pandas
+python-dotenv
+streamlit
+requests
+beautifulsoup4
+groq
+tenacity
+apscheduler
+plotly
