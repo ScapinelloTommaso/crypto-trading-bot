@@ -32,27 +32,27 @@ The bot operates entirely in **paper trading mode** on the Binance Testnet, ensu
 ```mermaid
 graph TD
     subgraph "Data Gathering"
-    CCXT[ccxt (Binance Testnet)] --> DA[Data Agent]
-    News[CryptoPanic / Reddit] --> SentA[Sentiment Agent]
+    CCXT["ccxt (Binance Testnet)"] --> DA["Data Agent"]
+    News["CryptoPanic / Reddit"] --> SentA["Sentiment Agent"]
     end
 
-    subgraph "AI Core (Groq LLaMA-3)"
-    DA -->|OHLCV & Tech Indicators| StratA[Strategy Agent]
-    SentA -->|1-10 Score + Summary| StratA
-    StratA -->|JSON Decision| Parser[Validation]
+    subgraph "AI Core"
+    DA -->|"OHLCV & Tech Indicators"| StratA["Strategy Agent"]
+    SentA -->|"1-10 Score + Summary"| StratA
+    StratA -->|"JSON Decision"| Parser["Validation"]
     end
 
     subgraph "Execution & Storage"
-    Parser --> EA[Execution Agent]
+    Parser --> EA["Execution Agent"]
     EA --> CCXT
-    DA --> DB[(SQLite DB)]
+    DA --> DB[("SQLite DB")]
     SentA --> DB
     StratA --> DB
     EA --> DB
     end
 
     subgraph "User Interface"
-    DB --> UI[Streamlit Dashboard]
+    DB --> UI["Streamlit Dashboard"]
     end
 ```
 
