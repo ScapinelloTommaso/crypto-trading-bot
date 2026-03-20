@@ -58,8 +58,8 @@ graph TD
 
 ## 📸 Dashboard Preview
 
-![Dashboard Screenshot](https://via.placeholder.com/1200x800.png?text=Insert+Dashboard+Screenshot+Here)
-*(Replace this placeholder with a real screenshot of the Streamlit dashboard)*
+![Dashboard Overview](assets/dashboard_top.png)
+![AI Reasoning & Sentiment](assets/dashboard_bottom.jpg)
 
 ## 🚀 Setup Guide
 
@@ -72,7 +72,7 @@ graph TD
 ### 2. Installation
 Clone the repository and construct the project environment:
 ```bash
-git clone https://github.com/yourusername/crypto-trading-bot.git
+git clone https://github.com/ScapinelloTommaso/crypto-trading-bot.git
 cd crypto-trading-bot
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
